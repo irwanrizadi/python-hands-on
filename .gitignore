@@ -102,3 +102,13 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+#documents file
+*.pdf
+*.pptx
+*.docx
+*.doc
+*.odt
+*.ppt
+*.odp
+*.dot

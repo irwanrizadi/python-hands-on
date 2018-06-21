@@ -1,0 +1,28 @@
+A tutorial for complete beginners
+	pengelompokkan berdasarkan jenis kelamin
+		1. persentase laki-laki selamat 18.89%	
+		2. persentase perempuan selamat 74.20%
+	Pengelompokkan berdasarkan umur
+		1. persentase anak-anak yang selamat(<18 tahun) 53.98%
+		2. Persentase orang dewasa yang selamat (>18 tahun) 38.26%
+	Pengelompokkan berdasarkan kelas
+		1. persentase penumpang selamat pada kelas pertama 62.96%
+		2. persentase penumpang selamat pada kelas kedua 12.81%
+		3. persentase penumpang selamat pada kelas ketiga 24.23%
+	Persentase 
+Exploring Survival on The Titanic
+        >Keluarga dengan jumlah anggota < 1 memiliki jumlah tidak selamat           tertinggi
+	>data menunjukkan grafik yang skew ke kanan sehingga untuk mengisi missing 	  value dapat menggunakan nilai median bukan nilai mean
+introduction to ensembling/stacking in python
+	1. korelasi
+	   > berbanding lurus
+	     korelasi terbesar ditandai dengan warna biru tua dimiliki oleh 	     variabel antara family size dan parch
+	   > berbanding terbalik
+	     korelasi terbesar ditandai dengan warna merah tua dimiliki oleh 	     variabel Pclass dan cabin
+A journey to titanic
+	> Dilihat berdasarkan keberangkatan, persentase tertinggi penumpang 	  selamat berasal dari kategori C
+	> dilihat dari boxplot mean dari penumpang yang selamat lebih besar dari 	  yang tidak selamat
+	> rata-rata penumpang selamat tertinggi terbanyak yang pergi bersama 	  keluarga
+
+
+ 

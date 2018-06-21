@@ -1,0 +1,57 @@
+--EXERCISE
+--no1. Seluruh mobil mazda dan spesifikasinya
+select* from carspec
+where brand='mazda';
+
+--no2. Daftar brand mobil, sort ascending
+select distinct brand from carspec
+order by brand asc;
+
+--no3. Ada berapa jenis bodystyle
+select distinct bodystyle from carspec;
+select count (distinct bodystyle) from carspec;
+
+--no4. mobil dengan harga antara 6000 dan 9000
+select brand, price from carspec
+where price between 6000 and 9000;
+
+--no5. Brand , Bodystyle, Engine Size, Horse power and price dimana 
+--price lebih besar dari 15750 dan horse power lebih kecil dari 106
+select brand, bodystyle, engsize, hp, price from carspec
+where price > 15750 and hp<106;
+
+--no6.mobil brand alfa-romero, bmw, jaguar, mazda, toyota dengan harga>8000
+select brand, price from carspec
+where brand in('alfa-romero','bmw','jaguar','mazda','toyota') and price>8000;
+
+--no7. mobil selain mitsubishi, dodge, honda, isuzu dengan drivewheels bukam fwd
+select brand, drivewheels from carspec
+where brand not in('mitsubishi','dodge','honda','isuzu') and drivewheels not like 'fwd';
+
+--no8. Brand mobil yang dimulai dari huruf a
+select brand from carspec
+where upper(brand) like'A%';
+
+--no9. jumlah mobil bmw
+select count (brand) from carspec
+where brand='bmw';
+
+--no10. car id, brand, citympg, price untuk mobil selain sedan urutkan descending
+select carid, brand, citympg, price from carspec
+where bodystyle not like 'sedan'
+order by price desc;
+
+--no11. mobil termahal, berapa harganya
+select brand, price from carspec 
+order by price desc
+limit 1;
+
+--no12. harga audi termurah
+select brand, price from carspec
+order by price
+limit 1;
+
+--no13. mobil honda dengan horse power tertinggi dan harga dibawah 8000
+select brand, hp, price from carspec
+where price <8000 and brand ='honda'
+order by hp desc

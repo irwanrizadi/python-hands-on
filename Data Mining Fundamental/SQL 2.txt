@@ -1,0 +1,88 @@
+--SESSION 3
+
+--AGGREGATE FUNCTION,
+--calculation on a set of values and return a single values
+
+--COUNT
+--banyak record pada setiap tahun
+select years, count(years) as cnt_yr from wage
+where years is not null
+group by years;
+
+--SUM
+--Jumlah basepay setiap jobtitle pada tahun 2011, diurutkan berdasarkan jumlah tertinggi
+select years, jobtitle, count(basepay) as sum_bsp from wage
+where years ='2011' and jobtitle is not null
+group by years,jobtitle
+order by sum_bsp desc;
+
+--AVERAGE
+--rata-rata totalpay nurse manager di setiap tahun diurutkan dari yang terbaru
+select jobtitle, years, avg(totalpay) as mean_tp  from wage
+where jobtitle='NURSE MANAGER' and years is not null
+group by years, jobtitle
+order by years desc;
+
+--MAX
+--maximum total pay setiap jobtitle di setiap tahun,
+--urutkan berdasarkan tahun dan nilai max pay
+select years, jobtitle, max(totalpay) as max_pay from wage
+where jobtitle is not null
+group by years, jobtitle
+order by years,max_pay desc;
+
+--MIN
+--maximum total pay setiap jobtitle di setiap tahun,
+--urutkan berdasarkan tahun dan nilai max pay
+select years, jobtitle, min(totalpay) as min_pay from wage
+where jobtitle is not null
+group by years, jobtitle
+order by years,min_pay;
+
+--having clause untuk konodisi dimana jika menggunakan where akan error
+select jobtitle, sum(totalpay) as sum_pay from wage
+group by jobtitle
+--having
+select jobtitle, sum(totalpay) as sum_pay from wage
+group by jobtitle
+having sum(totalpay)>10000000;
+
+--case when
+select totalpay,
+	case when totalpay>200000 
+		then 'hi-paid' else 'med-paid'
+	end
+	as pay_group
+	from wage
+limit 10;
+	
+select totalpay,
+	case when totalpay>200000 then 'hi-paid'
+ 		when totalpay > 175000 and totalpay<=200000
+ 		then 'med-paid'
+		else 'low-paid'
+	end as pay_group
+from wage 
+limit 50;
+
+--inner join count
+select count(*) from
+carrisk inner join carspec
+on carrisk.carid=carspec.carid;
+
+--left join count
+select count(*) from
+carrisk a left join carspec b
+on a.carid=b.carid;
+
+--right join count
+select count(*) from
+carrisk a right join carspec b
+on a.carid= b.carid;
+
+--full outer join count
+select count(*) from
+carrisk a full outer join carspec b
+on a.carid =b.carid;
+
+

@@ -1,0 +1,6 @@
+customer key	fcF0rJEyIol7GvRKU6bJkff8a
+customer secret	rFtpVj5dmsvci0QfcoFzmHTymW6mP5XQ64br4dRpzKOkOBuXQU
+
+access token 	107921319-kWV6BMyLFF9DzNawj9v5Sj5OHXIZyuhA27WmAO8a
+access token secret 	BKTQiiiI1CK5Qw41MdMcZDEcYEQORZrE7HbIUjnXiE1rM
+
